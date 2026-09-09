@@ -24,4 +24,8 @@ int main() {
   int x, y, z, t;
   cin >> x >> y >> z >> t;
   cout << x << "\n" << y << endl << z << " " << t;
+
+
+
+  
 }
