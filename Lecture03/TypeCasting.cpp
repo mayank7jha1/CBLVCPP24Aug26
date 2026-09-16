@@ -1,5 +1,6 @@
 #include <climits>
 #include <cstring>
+#include <iomanip>
 #include <iostream>
 using namespace std;
 
@@ -89,4 +90,11 @@ int main() {
   cout << endl << "----------------------------------------------" << endl;
 
   cout << x + d << endl;
+
+  // cout has a precision of 6 significant digit:
+  // setprecision(2) : Significant digit
+  // fixed and setprecision : Decimal point precision:
+  cout << 109.1234567 << endl;
+  cout << setprecision(8) << 109.1234567 << endl;
+  cout << fixed << setprecision(8) << 109.123456789 << endl;
 }
