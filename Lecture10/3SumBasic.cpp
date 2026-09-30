@@ -27,7 +27,7 @@ int main() {
     // This will tell you ki for the given test case you have found
     //  a triplet or not.
     int flag = 0;
-
+    // Computations : ~n*n*n
     for (int i = 0; i < n - 2; i++) {
       for (int j = i + 1; j < n - 1; j++) {
 
