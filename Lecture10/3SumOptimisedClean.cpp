@@ -9,17 +9,20 @@ int main() {
   int t;
   cin >> t;
 
+  // 1000:
   for (int l = 1; l <= t; l++) {
 
     int n;
     cin >> n;
 
+    // 2*10^5
     int a[n];
     for (int i = 0; i < n; i++) {
       cin >> a[i];
       a[i] %= 10;
     }
 
+    // 2*10^5
     int freq[10]{};
     for (int i = 0; i < n; i++) {
       int ld = a[i];
@@ -29,6 +32,7 @@ int main() {
       }
     }
 
+    // 30
     int b[30]{};
     int size{0};
 
@@ -41,6 +45,7 @@ int main() {
       }
     }
 
+    // 30*30*30 :~ 4*10^5+27*10^3*1000  : ~10^8
     int flag = 0;
     for (int i = 0; i < size - 2; i++) {
       for (int j = i + 1; j < size - 1; j++) {
