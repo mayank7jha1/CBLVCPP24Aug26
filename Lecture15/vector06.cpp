@@ -1,8 +1,12 @@
+#include <algorithm>
 #include <climits>
 #include <cstring>
 #include <iostream>
 #include <vector>
+
 using namespace std;
+
+bool C1(int x, int y) { return (x > y); }
 
 void Method01(vector<int> &ans) {
   for (int i = 0; i < ans.size(); i++) {
@@ -83,6 +87,23 @@ int main() {
   // Using Iteators:
   Method03(v);
   cout << endl << "----------------------------" << endl;
+
+  sort(v.begin(), v.end(), greater<int>());
+  sort(v.begin(), v.end(), C1);
+  
+  // C++ ke pass there are 4 comparators :
+  // 
+  // less<int> : It will return true when pichla element is less than next
+  // element.
+  // 
+  //  greater<int> : It will return true when pichla element is greater than
+  //  next element.
+  // 
+  // less_equal<int>
+  // 
+  //  greater_equal<int>
+
+  reverse(v.begin(), v.end());
 
   return 0;
 }
